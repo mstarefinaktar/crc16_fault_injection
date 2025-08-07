@@ -1,0 +1,6 @@
+Time_ns,Data_in,FaultMask,FaultValue,CRC_out
+15000,abcd,0000,0000,ffff
+35000,1234,0008,0000,fffe
+55000,0000,0020,0020,efdd
+75000,ffff,ffff,ffff,cf9b
+95000,8000,8000,0000,9f36
