@@ -59,6 +59,14 @@ This creates `crc_fault_output.stil` for use with pattern-based test systems.
 
 ---
 
+---
+
+## 📷 Waveform (GTKWAVE View)
+
+Below is the waveform showing how faults were injected and observed using GTKWave:
+
+![CRC Fault Injection Simulation](./crc_fault.PNG)
+
 ## 🎯 Use Cases
 
 * Fault injection and **bit-level test evaluation**
