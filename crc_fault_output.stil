@@ -1,0 +1,55 @@
+STIL 1.0;
+Signals {
+    "clk" In;
+    "data_in[15:0]" In;
+    "fault_mask[15:0]" In;
+    "fault_value[15:0]" In;
+    "crc_out[15:0]" Out;
+}
+SignalGroups {
+    "all" = "clk", "data_in[15:0]", "fault_mask[15:0]", "fault_value[15:0]", "crc_out[15:0]";
+}
+Timing {
+    WaveformTable "default" {
+        Period '100ns';
+        Waveform "clk" { '0' D; '1' U; }
+        Waveform "default" { '0' L; '1' H; }
+    }
+}
+PatternBurst "crc_fault_vectors" {
+    Pattern 15000 {
+        "clk" = 1;
+        "data_in[15:0]" = 1010101111001101;
+        "fault_mask[15:0]" = 0000000000000000;
+        "fault_value[15:0]" = 0000000000000000;
+        "crc_out[15:0]" = 1111111111111111;
+    }
+    Pattern 35000 {
+        "clk" = 1;
+        "data_in[15:0]" = 0001001000110100;
+        "fault_mask[15:0]" = 0000000000001000;
+        "fault_value[15:0]" = 0000000000000000;
+        "crc_out[15:0]" = 1111111111111110;
+    }
+    Pattern 55000 {
+        "clk" = 1;
+        "data_in[15:0]" = 0000000000000000;
+        "fault_mask[15:0]" = 0000000000100000;
+        "fault_value[15:0]" = 0000000000100000;
+        "crc_out[15:0]" = 1110111111011101;
+    }
+    Pattern 75000 {
+        "clk" = 1;
+        "data_in[15:0]" = 1111111111111111;
+        "fault_mask[15:0]" = 1111111111111111;
+        "fault_value[15:0]" = 1111111111111111;
+        "crc_out[15:0]" = 1100111110011011;
+    }
+    Pattern 95000 {
+        "clk" = 1;
+        "data_in[15:0]" = 1000000000000000;
+        "fault_mask[15:0]" = 1000000000000000;
+        "fault_value[15:0]" = 0000000000000000;
+        "crc_out[15:0]" = 1001111100110110;
+    }
+}
