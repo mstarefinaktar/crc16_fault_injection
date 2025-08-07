@@ -2,6 +2,8 @@
 
 This project demonstrates how to inject **bit-level faults** into input data for a **16-bit parallel CRC generator**, and observe the effect on the CRC output. It's intended for use in **IC reliability testing**, **fault modeling**, and **DFT exploration**.
 
+> ✅ If you're looking for **automated fault bit sweeping**, check out the companion project: [CRC16 Fault Sweep](https://github.com/mstarefinaktar/crc16_fault_sweep)
+
 ---
 
 ## 📁 Files
